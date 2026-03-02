@@ -10,16 +10,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Enlazamos el botón de la interfaz
-        val btnIrSistema = findViewById<Button>(R.id.btn_ir_sistema)
+        // CORRECCIÓN: El ID en tu XML es "button3"
+        val btnIrSistema = findViewById<Button>(R.id.button3)
 
-        // Presiona el boton
+        // Presiona el botón
         btnIrSistema.setOnClickListener {
-
-            //Desde esta pantalla (this), ve a SistemaSolarActivity
+            // Desde esta pantalla (this), ve a SistemaSolarActivity
             val intent = Intent(this, SistemaSolarActivity::class.java)
 
-            //Arrancamos la nueva Activity
+            // Arrancamos la nueva Activity
             startActivity(intent)
         }
     }

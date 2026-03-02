@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#050508">
@@ -53,18 +54,18 @@
         android:id="@+id/lunas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:adjustViewBounds="true"
         android:contentDescription="Lunas"
         android:src="@drawable/lunas5"
-        app:layout_constraintTop_toBottomOf="@id/textExplicacion"
         app:layout_constraintBottom_toTopOf="@id/button3"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textExplicacion"
         app:layout_constraintWidth_percent="0.8" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/regreso"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
