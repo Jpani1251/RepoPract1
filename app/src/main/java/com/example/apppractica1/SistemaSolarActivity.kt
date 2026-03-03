@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.app.ActivityOptions
 
 class SistemaSolarActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,11 +35,20 @@ class SistemaSolarActivity : AppCompatActivity() {
 
         btnPlanetas?.setOnClickListener {
             val intent = Intent(this, PlanetasActivity::class.java)
-            startActivity(intent)
+
+            val options = ActivityOptions.makeCustomAnimation(
+                this,
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
+
+            startActivity(intent, options.toBundle())
         }
 
         btnRegreso?.setOnClickListener {
             finish()
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         }
     }
 }
